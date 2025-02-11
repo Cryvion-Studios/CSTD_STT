@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5g566ds474re"]
+[gd_scene load_steps=5 format=3 uid="uid://b5g566ds474re"]
 
+[ext_resource type="PackedScene" uid="uid://cwo38eb67fhxd" path="res://player/player.tscn" id="1_ci7co"]
 [ext_resource type="Texture2D" uid="uid://chl3vwnfamwj" path="res://tileset/game_tileset_1.png" id="1_k8yss"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6aipx"]
@@ -115,8 +116,14 @@ sources/0 = SubResource("TileSetAtlasSource_6aipx")
 
 [node name="Level" type="Node2D"]
 
+[node name="Player" parent="." instance=ExtResource("1_ci7co")]
+position = Vector2(32, -83)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dbgv7")
 format = 2
 layer_0/name = "Ground"
-layer_0/tile_data = PackedInt32Array(-65536, 983040, 8, -65535, 983040, 8, -65534, 983040, 8, -65533, 983040, 8, -65532, 983040, 8, -65531, 983040, 8, -65530, 983040, 8, -65529, 983040, 8, -65528, 983040, 8, -65527, 983040, 8, -65526, 983040, 8, -131062, 983040, 8, -196598, 983040, 8, -262134, 983040, 8, -131072, 983040, 8, -131071, 983040, 8, -131070, 983040, 8, -196599, 983040, 8, -131063, 983040, 8, -131064, 983040, 8, -131065, 983040, 8)
+layer_0/tile_data = PackedInt32Array(-65536, 983040, 8, -65535, 983040, 8, -65534, 983040, 8, -65533, 983040, 8, -65532, 983040, 8, -65531, 983040, 8, -65530, 983040, 8, -65529, 983040, 8, -65528, 983040, 8, -65527, 983040, 8, -65526, 983040, 8, -131062, 983040, 8, -196598, 983040, 8, -262134, 983040, 8, -131072, 983040, 8, -131071, 983040, 8, -131070, 983040, 8, -196599, 983040, 8, -131063, 983040, 8, -131064, 983040, 8, -131065, 983040, 8, -65537, 983040, 8, -65538, 983040, 8, -65539, 983040, 8, -65540, 983040, 8, -65541, 983040, 8, -65542, 983040, 8, -65543, 983040, 8, -65544, 983040, 8, -65545, 983040, 8, -65546, 983040, 8, -1, 983040, 8, -2, 983040, 8, -3, 983040, 8, -4, 983040, 8, -5, 983040, 8, -6, 983040, 8, -7, 983040, 8, -8, 983040, 8, -9, 983040, 8, -10, 983040, 8)
