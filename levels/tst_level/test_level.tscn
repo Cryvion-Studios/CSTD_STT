@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://0gveuaxeda6a"]
+
+[ext_resource type="PackedScene" uid="uid://b5g566ds474re" path="res://levels/base_level.tscn" id="1_q22uy"]
+[ext_resource type="PackedScene" uid="uid://t87tdbrgx0mu" path="res://enemies/enemy_crab.tscn" id="2_j8dcx"]
+
+[node name="TestLevel" instance=ExtResource("1_q22uy")]
+
+[node name="TileMap" parent="." index="1"]
+layer_0/tile_data = PackedInt32Array(-65544, 983040, 8, -8, 983040, 8, -7, 983040, 8, -6, 983040, 8, -5, 983040, 8, -4, 983040, 8, -3, 983040, 8, -2, 983040, 8, -1, 983040, 8, -65536, 983040, 8, -65535, 983040, 8, -65534, 983040, 8, -65533, 983040, 8, -65532, 983040, 8, -65531, 983040, 8, -65530, 983040, 8, -65529, 983040, 8, -65528, 983040, 8, -65527, 983040, 8, -65526, 983040, 8, -65525, 983040, 8, -131061, 983040, 8, -131063, 983040, 8, -131064, 983040, 8, -131065, 983040, 8, -131062, 983040, 8, -131066, 983040, 8, -131067, 983040, 8, -131068, 983040, 8, -131069, 983040, 8, -65546, 983040, 8, -65545, 983040, 8, -131072, 983040, 8, -131071, 983040, 8, -131070, 983040, 8, -65537, 983040, 8, -65538, 983040, 8, -65539, 983040, 8, -65540, 983040, 8, -65541, 983040, 8, -65542, 983040, 8, -65543, 983040, 8, -9, 983040, 8, -10, 983040, 8, -131060, 983040, 8, -131059, 983040, 8, -131058, 983040, 8, -131057, 983040, 8, -65522, 983040, 8, -65523, 983040, 8, -65524, 983040, 8, -65521, 983040, 8, -65520, 983040, 8, -65519, 983040, 8, -65518, 983040, 8, -65517, 983040, 8, -65516, 983040, 8, -65515, 983040, 8, -65514, 983040, 8, -65513, 983040, 8, -65512, 983040, 8, -65511, 983040, 8, -65510, 983040, 8, -65509, 983040, 8, -65508, 983040, 8, -65507, 983040, 8, -65506, 983040, 8, -65505, 983040, 8, -65504, 983040, 8, -65503, 983040, 8, -65502, 983040, 8, -65501, 983040, 8, -65500, 983040, 8, -65499, 983040, 8, -65498, 983040, 8, -65497, 983040, 8, -65496, 983040, 8, -131032, 983040, 8, -131033, 983040, 8, -131034, 983040, 8, -131035, 983040, 8, -131036, 983040, 8, -131037, 983040, 8, -131038, 983040, 8, -131039, 983040, 8, -131040, 983040, 8, -131041, 983040, 8, -131042, 983040, 8, -131043, 983040, 8, -131044, 983040, 8, -131045, 983040, 8, -131046, 983040, 8, -131047, 983040, 8, -131048, 983040, 8, -131049, 983040, 8, -131050, 983040, 8, -131051, 983040, 8, -131052, 983040, 8, -131053, 983040, 8, -131054, 983040, 8, -131055, 983040, 8, -131056, 983040, 8)
+
+[node name="EnemyCrab" parent="." index="2" node_paths=PackedStringArray("patrol_points") instance=ExtResource("2_j8dcx")]
+position = Vector2(180, -33)
+patrol_points = NodePath("PatrolPoint")
+
+[node name="PatrolPoint" type="Node2D" parent="EnemyCrab" index="2"]
+
+[node name="Point1" type="Marker2D" parent="EnemyCrab/PatrolPoint" index="0"]
+position = Vector2(-66, -1)
+
+[node name="Point2" type="Marker2D" parent="EnemyCrab/PatrolPoint" index="1"]
+position = Vector2(122, -1)
+
+[node name="EnemyCrab2" parent="." index="3" node_paths=PackedStringArray("patrol_points") instance=ExtResource("2_j8dcx")]
+position = Vector2(308, -70)
+patrol_points = NodePath("PatrolPoint")
+speed = 2500
+wait_time = 1
+
+[node name="PatrolPoint" type="Node2D" parent="EnemyCrab2" index="3"]
+
+[node name="Point1" type="Marker2D" parent="EnemyCrab2/PatrolPoint" index="0"]
+position = Vector2(-66, -1)
+
+[node name="Point2" type="Marker2D" parent="EnemyCrab2/PatrolPoint" index="1"]
+position = Vector2(122, -1)

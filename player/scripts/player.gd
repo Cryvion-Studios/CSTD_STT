@@ -59,5 +59,5 @@ func player_animations():
 		animated_sprite_2d.play("jump")
 
 func input_movement():
-	var direction : int = Input.get_axis("move_left", "move_right")
+	var direction : float = Input.get_axis("move_left", "move_right")
 	return direction
